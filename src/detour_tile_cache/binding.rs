@@ -12,7 +12,7 @@ extern "C" {
         _self: *mut DtTileCache,
         dt: f32,
         navmesh: *mut DtNavMesh,
-        up_to_date: *const bool,
+        up_to_date: *mut bool,
     ) -> DtStatus;
 
     pub fn dtTileCache_free(_self: *mut DtTileCache);

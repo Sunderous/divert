@@ -4,7 +4,7 @@
 
 extern "C"
 {
-    dtStatus dtTileCache_update(dtTileCache *tileCache, float dt, dtNavMesh* navmesh, bool* upToDate = 0)
+    dtStatus dtTileCache_update(dtTileCache* tileCache, const float dt, dtNavMesh* navmesh, bool* upToDate = 0)
     {
         return tileCache->update(dt, navmesh, upToDate);
     }

@@ -19,13 +19,9 @@ pub struct TileCache<'a> {
 unsafe impl Send for TileCache<'_> {}
 
 impl<'a> TileCache<'a> {
-    pub fn update(
-        &self,
-        dt: f32,
-        navmesh: NavMesh,
-        up_to_date: *const bool,
-    ) -> DivertResult<DtStatus> {
-        let status = unsafe { dtTileCache_update(self.handle, dt, navmesh.handle, up_to_date) };
+    pub fn update(&self, navmesh: NavMesh, mut up_to_date: bool) -> DivertResult<DtStatus> {
+        let status =
+            unsafe { dtTileCache_update(self.handle, 0f32, navmesh.handle, &mut up_to_date) };
 
         if status.is_failed() {
             return Err(DivertError::Failure(status));
