@@ -1,6 +1,6 @@
-#include "../recastnavigation/Detour/Include/DetourStatus.h"
-#include "../recastnavigation/Detour/Include/DetourNavMesh.h"
-#include "../recastnavigation/Detour/Include/DetourNavMeshQuery.h"
+#include "../../recastnavigation/Detour/Include/DetourStatus.h"
+#include "../../recastnavigation/Detour/Include/DetourNavMesh.h"
+#include "../../recastnavigation/Detour/Include/DetourNavMeshQuery.h"
 
 extern "C"
 {

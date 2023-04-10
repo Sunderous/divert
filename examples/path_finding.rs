@@ -1,7 +1,7 @@
 use byteorder::{LittleEndian, ReadBytesExt};
 use log::{info, LevelFilter};
 
-use divert::{
+use divert::detour::{
     DivertError, DivertResult, DtStraightPathFlags, NavMesh, NavMeshParams, NavMeshQuery, PolyRef,
     QueryFilter, TileRef, Vector,
 };
